@@ -18,7 +18,7 @@ namespace JLPlugin.Data
             ErrorUtil.Identifier = this.name;
             ErrorUtil.Message = "Region {0} - {2} is an invalid value for {1}";
 
-            DiskCardGame.RegionData standard = ResourceBank.Get<RegionProgression>("Data/Map/RegionProgression").regions[this.tier][0];
+            DiskCardGame.RegionData standard = ResourceBank.Get<RegionProgression>("Data/Map/RegionProgression").regions[this.tier];
 
             DiskCardGame.RegionData rd = ScriptableObject.CreateInstance<DiskCardGame.RegionData>();
             rd.ambientLoopId =              standard.ambientLoopId;
